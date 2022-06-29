@@ -16,8 +16,8 @@ pipeline {
         }
         stage('Terraform action') {
             steps {
-                echo "Terraform action from the parameter is $(action)"
-                sh ("terraform $(action) --auto-approve");
+                echo "Terraform action from the parameter is ${action}"
+                sh ("terraform ${action} --auto-approve");
             }
         }
         stage('Status') {
